@@ -1,9 +1,10 @@
-/* HADY ZEN'IN */
+/* Hady Zen'in */
+/* dibuat oleh Hady with love - Copyright HadyZenin 2025 */
 
 const { spawn } = require('child_process');
 
 function hady() {
-  const child = spawn("node Ayanokoji.js", {
+  const child = spawn("node Ara.js", {
     cwd: __dirname,
     stdio: "inherit",
     shell: true
