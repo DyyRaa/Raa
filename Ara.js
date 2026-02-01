@@ -1,4 +1,5 @@
-/* HADY ZEN'IN */
+/* Hady Zen'in */
+/* dibuat oleh Hady with love - Copyright HadyZenin 2025 */
 
  const express = require('express');
  const app = express();
@@ -26,14 +27,6 @@ const waktu = now.format('HH:mm:ss');
 const web = `https://${process.env.PROJECT_DOMAIN}.glitch.me`;
 global.Ayanokoji = { awalan: awalan, nama: nama, admin: admin, logo: logo, aikey: aikey, bahasa: nakano, web: web, maintain: maintain, waktu: waktu, tanggal: tanggal };
 
-async function notiferr(notif) { 
-  try { 
- const oreki = `⚡ 𝗔𝗱𝗮 𝗘𝗿𝗿𝗼𝗿\n\n𝖯𝗋𝗈𝗃𝖾𝗄: ${nama}\n𝖤𝗋𝗋𝗈𝗋: ${notif}`;
- const { data } = await axios.get(`https://api.callmebot.com/facebook/send.php?apikey=${notifkey}&text=${encodeURIComponent(oreki)}`);
-  } catch (futaro) {
-   console.log(logo.error + 'Terjadi kesalahan pada notif' + futaro);
-  }
-};
 function clear() {
   fs.readdir('assets', (err, files) => {
     if (err) {
@@ -116,25 +109,7 @@ async function loadC() {
 console.log(kiyopon);
 clear();
 setInterval(function() { loadC(); }, 1000);
-cron.schedule('0 */4 * * *', () => {
-  console.clear();
-  process.exit();
-  const child = spawn("refresh", {
-        cwd: __dirname,
-        stdio: "inherit",
-        shell: true
-});
-    child.on('error', (err) => {
-    console.log(logo.error + 'Ada error pada autorest: ', err);
-});
-    child.on('exit', (code) => {
-      if (code === 0) {
-    console.log(ayanokoji('restar') + nama + ' berhasil dimulai ulang.');
-       } else {
-    console.log(logo.error + nama + ' gagal dimulai ulang: ', code);
-  }
- });
-});
+
 console.log(ayanokoji('versi') + `${version}.`);
 console.log(ayanokoji('awalan') + `${awalan}`);
 console.log(ayanokoji('bahasa') + `${nakano}.`);
@@ -151,13 +126,11 @@ if (!akun || akun.length < 0 || !JSON.parse(akun)) {
 
 login({appState: JSON.parse(akun, zen)}, setting, (err, api) => {
 if (err) { 
-  notiferr(`Terjadi kesalahan saat login: ${err.message || err.error}`);
   console.log(logo.error + `Terjadi kesalahan saat login: ${err.message || err.error}`);
  }
       
    api.listenMqtt((err, event) => {
 if (err) {
-  notiferr(`${err.message || err.error}`);
   console.log(logo.error + `${err.message || err.error}`);
   process.exit();
 }
@@ -208,7 +181,6 @@ if ((hady.peran == 2 || hady.peran == 1) && admin.includes(event.senderID) || ha
  }
 }
  } catch (error) {
-   notiferr(`Perintah error: ${error.message}`);
    console.log(logo.error + 'Perintah error: ' + error.message);
  }
 }
