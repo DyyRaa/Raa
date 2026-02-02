@@ -31,14 +31,13 @@ Ayanokoji: async function ({ api, event, getStream }) {
      const nino = Date.now();
      const raffa = nino - chika;
 
-     const hadi = `[ ${ping(raffa)} | ${raffa} ] • 𝗦𝗜𝗦𝗧𝗘𝗠 🜲\n`
+     const hadi = `[ ${ping(raffa)} | ${raffa} ] • 𝗦𝗜𝗦𝗧𝗘𝗠 ✨️\n`
                  + `\n- Uptime: ${arif}`
                  + `\n- Ram: ${riley}`
                  + `\n- Disk: ${edi}`
                  + `\n- Cpu: ${rizky} (${os.cpus().length} cores)`;
 
-api.sendMessage({ body: hadi, attachment: fs.createReadStream(await getStream('https://raw.githubusercontent.com/HadyZen/Ayanokoji-Kiyotaka/refs/heads/main/assets/ayanokoji.png', 'sistem.png')) }, event.threadID, event.messageID);
-
+api.sendMessage(hadi, event.threadID, event.messageID);
 async function getDiskUsage() {
   const { stdout } = await exec('df -k /');
   const [_, total, used] = stdout.split('\n')[1].split(/\s+/).filter(Boolean);
@@ -56,13 +55,13 @@ function prettyBytes(bytes) {
 }
 
 function ping(raffa) { 
-  if (raffa < 110) {
+  if (raffa < 100) {
     return "❄";
-} else if (raffa < 330) {
+} else if (raffa < 320) {
      return "🍀";
-} else if (raffa < 660) {
+} else if (raffa < 650) {
      return "🍁";
-} else if (raffa < 990) {
+} else if (raffa < 999) {
      return "🌡";
 } else {
      return "🔥";
