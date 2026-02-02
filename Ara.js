@@ -13,7 +13,7 @@
  const akun = fs.readFileSync('akun.txt', 'utf8');
  const { version } = require('./package');
  const gradient = require('gradient-string');
- const { awalan, nama, admin, proxy, port, bahasa: nakano, maintain, chatdm, notifkey, aikey, setting, zonawaktu } = require('./kiyotaka');
+ const { awalan, nama, admin, proxy, port, bahasa: nakano, maintain, chatdm, aikey, setting, zonawaktu } = require('./kiyotaka');
  const { kuldown } = require('./hady-zen/kuldown');
  const moment = require('moment-timezone');
  const now = moment.tz(zonawaktu);
@@ -24,8 +24,7 @@ const zen = { host: proxy, port: port };
 const kiyopon = gradient("#ADD8E6", "#4682B4", "#00008B")(logo.ayanokoji);
 const tanggal = now.format('YYYY-MM-DD');
 const waktu = now.format('HH:mm:ss');
-const web = `https://${process.env.PROJECT_DOMAIN}.glitch.me`;
-global.Ayanokoji = { awalan: awalan, nama: nama, admin: admin, logo: logo, aikey: aikey, bahasa: nakano, web: web, maintain: maintain, waktu: waktu, tanggal: tanggal };
+global.Ayanokoji = { awalan: awalan, nama: nama, admin: admin, logo: logo, aikey: aikey, bahasa: nakano, maintain: maintain, waktu: waktu, tanggal: tanggal };
 
 function clear() {
   fs.readdir('assets', (err, files) => {
@@ -137,7 +136,7 @@ if (err) {
 const body = event.body;
 if (!body || global.Ayanokoji.maintain === true && !admin.includes(event.senderID) || chatdm === false && event.isGroup == false && !admin.includes(event.senderID)) return; 
   addData(event.senderID);
-if (body.toLowerCase() == "prefix") return api.sendMessage(`⚡ Awalan ${nama}: ${awalan}`, event.threadID, event.messageID);
+if (body.toLowerCase() == "prefix") return api.sendMessage(`✨️ Awalan ${nama} adalah: ${awalan}`, event.threadID, event.messageID);
 if (!body.startsWith(awalan)) return console.log(logo.pesan + `${event.senderID} > ${body}`);
    const cmd = body.slice(awalan.length).trim().split(/ +/g).shift().toLowerCase();
 	   
