@@ -1,9 +1,14 @@
-@penulis @HadyZen
-! Kode sumber ditulis oleh Hadi Pranata, mohon jangan mengubah nama penulis di mana pun (Harap menjadi pengguna yang cerdas dan hormati penulis karena mereka telah bermurah hati tanpa meminta keuntungan apa pun)
-! Kode sumber resmi: https://github.com/HadyZen/Ayanokoji-Kiyotaka
+Penulis @DyyRaa @HadyZen
+! Kode sumber ditulis oleh Hady Zen'in, mohon jangan mengubah nama penulis di mana pun (Harap menjadi pengguna yang cerdas dan hormati penulis karena mereka telah bermurah hati tanpa meminta keuntungan apa pun)
+! Kode sumber resmi: https://github.com/DyyRaa/Raa
 ! Jika Anda tidak mengunduh kode sumber dari alamat di atas, Anda menggunakan versi yang tidak dikenal dan berisiko akun Anda diretas. 
 Terima kasih telah menggunakan
 
+Sosmed: 
+! Facebook: hady.zen.in
+! Tiktok: @hady.zen.in
+! Github: DyyRaa / HadyZen
+! Npmjs: @hadyzenin
 
 Indonesia:
 ! Tolong jangan ubah kode di bawah ini, ini sangat penting untuk proyek ini.
