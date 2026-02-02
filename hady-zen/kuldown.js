@@ -1,4 +1,5 @@
-/* HADY ZEN'IN */
+/* Hady Zen'in */
+/* dibuat oleh Hady with love - Copyright HadyZenin 2025 */
 
 let hadi = {};
 function kuldown(id, cmd, cd) {
