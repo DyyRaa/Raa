@@ -3,7 +3,7 @@
 
  const express = require('express');
  const app = express();
- const login = require('./hady-zen/ayanokoji');
+ const login = require('hadyzen-fca');
  const { logo, warna, font, ayanokoji } = require('./hady-zen/log');
  const fs = require('fs');
  const path = require('path');
