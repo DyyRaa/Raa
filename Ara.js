@@ -109,10 +109,10 @@ console.log(kiyopon);
 clear();
 setInterval(function() { loadC(); }, 1000);
 
-console.log(ayanokoji('versi') + `${version}.`);
-console.log(ayanokoji('awalan') + `${awalan}`);
-console.log(ayanokoji('bahasa') + `${nakano}.`);
-console.log(ayanokoji('admin') + `${admin}.`);
+console.log(logo.info + `Versi ${version}`);
+console.log(logo.info + `Awalan ${awalan}`);
+console.log(logo.info + `Bahasa ${nakano}`);
+console.log(logo.info + `Admin ${admin}`);
 fs.readdir('./perintah', (err, files) => { 
  const shadow = files.map(file => path.parse(file).name);
 console.log(ayanokoji('perintah') + `${shadow}.`);
@@ -136,7 +136,7 @@ const body = event.body;
 if (!body || global.Ayanokoji.maintain === true && !admin.includes(event.senderID) || chatdm === false && event.isGroup == false && !admin.includes(event.senderID)) return; 
   addData(event.senderID);
 if (body.toLowerCase() == "prefix") return api.sendMessage(`✨️ Awalan ${nama} adalah: ${awalan}`, event.threadID, event.messageID);
-if (!body.startsWith(awalan)) return console.log(logo.pesan + `${event.senderID} > ${body}`);
+if (!body.startsWith(awalan)) return console.log(logo.chat + `${event.senderID}: ${body}`);
    const cmd = body.slice(awalan.length).trim().split(/ +/g).shift().toLowerCase();
 	   
  async function hady_cmd(cmd, api, event) {
