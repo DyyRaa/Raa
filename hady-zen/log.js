@@ -28,12 +28,11 @@ const warna = {
   putih: `\x1b[37m`
 };
 const logo = {
-  error: `${warna.hitam}${waktu}${warna.reset} ${warna.merah}${font.bold}🜲 ERROR: ${warna.reset}`, 
-  login: `${warna.hitam}${waktu}${warna.reset} ${warna.hijau}${font.bold}🜲 LOGIN: ${warna.reset}`, 
-  info: `${warna.hitam}${waktu}${warna.reset} ${warna.cyan}${font.bold}🜲 INFO: ${warna.reset}`, 
-  cmds: `${warna.hitam}${waktu}${warna.reset} ${warna.magenta}${font.bold}🜲 CMDS: ${warna.reset}`, 
-  pesan: `${warna.hitam}${waktu}${warna.reset} ${warna.biru}${font.bold}🜲 PESAN: ${warna.reset}`, 
-  update: `${warna.hitam}${waktu}${warna.reset} ${warna.kuning}${font.bold}🜲 UPDATE: ${warna.reset}`, 
+  error: `${warna.hitam}${waktu}${warna.reset} ${warna.merah}${font.bold}[ERROR] ${warna.reset}`, 
+  sukses: `${warna.hitam}${waktu}${warna.reset} ${warna.hijau}${font.bold}[SUKSES] ${warna.reset}`,
+  proses: `${warna.hitam}${waktu}${warna.reset} ${warna.biru}${font.bold}[PROSES] ${warna.reset}`,
+  chat: `${warna.hitam}${waktu}${warna.reset} ${warna.magenta}${font.bold}[CHAT] ${warna.reset}`,
+  info: `${warna.hitam}${waktu}${warna.reset} ${warna.cyan}${font.bold}[INFO] ${warna.reset}`, 
   ayanokoji: `▄▀█ █▄█ ▄▀█ █▄ █ █▀█ █▄▀ █▀█  █ █\n█▀█  █  █▀█ █ ▀█ █▄█ █ █ █▄█ ▄█ █`
 };
 function ayanokoji(nama) {
