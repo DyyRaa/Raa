@@ -36,7 +36,7 @@ const logo = {
   ayanokoji: `▄▀█ █▄█ ▄▀█ █▄ █ █▀█ █▄▀ █▀█  █ █\n█▀█  █  █▀█ █ ▀█ █▄█ █ █ █▄█ ▄█ █`
 };
 function ayanokoji(nama) {
-  return `${warna.hitam}${waktu}${warna.reset} ${warna.biru}${font.bold}🜲 ${nama.toUpperCase()}: ${warna.reset}`;
+  return `${warna.hitam}${waktu}${warna.reset} ${warna.biru}${font.bold}[${nama.toUpperCase()}] ${warna.reset}`;
 };
 
 module.exports = { warna, font, logo, ayanokoji };
