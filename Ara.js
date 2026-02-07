@@ -153,7 +153,7 @@ if (!body.startsWith(awalan)) return console.log(logo.chat + `${event.senderID}:
     const { hady, Ayanokoji, bahasa } = require(anime);
 
    if (hady && hady.nama === cmd && typeof Ayanokoji === 'function') {
-  console.log(logo.cmds + `Menjalankan perintah ${hady.nama}.`);
+  console.log(logo.info + `Menjalankan perintah ${hady.nama}`);
  const bhs = function(veng) { return bahasa[nakano][veng]; };	
    
    if (kuldown(event.senderID, hady.nama, hady.kuldown) == 'hadi') { 
